@@ -1,0 +1,44 @@
+/* Global Style */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", serif;
+  font-size: 16px;
+}
+
+/* Variables */
+:root {
+  --bs-secondary: rgb(229, 9, 20);
+  --bs-primary: #fff;
+}
+
+/* Reusable Button */
+.btn {
+  height: 40px;
+  width: 100px;
+  background-color: var(--bs-secondary);
+  color: var(--bs-primary);
+  text-transform: capitalize;
+  border: transparent;
+  border-radius: 8px;
+}
+
+/* Container */
+.container {
+  width: 1069px;
+  margin-inline: auto;
+  padding-block: 20px;
+}
+/* Header Section */
+.header-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  width: 15%;
+}
+.logo img {
+  max-width: 100%;
+}
