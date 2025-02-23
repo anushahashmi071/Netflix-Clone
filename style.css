@@ -7,10 +7,12 @@
   font-size: 16px;
   list-style: none;
 }
-body{
+
+body {
   color: var(--bs-primary);
   background-color: var(--bs-black);
 }
+
 /* Variables */
 :root {
   --bs-secondary: rgb(229, 9, 20);
@@ -28,13 +30,19 @@ body{
   text-transform: capitalize;
   border: transparent;
   border-radius: 5px;
+  cursor: pointer;
+  transition: background-color ease-in-out 0.3s;
+}
+
+.btn:hover {
+  background-color: rgb(229, 9, 20, 0.8);
 }
 
 /* Container */
 .container {
   width: 1069px;
   margin-inline: auto;
-  padding-block: 20px;
+  padding-block: 25px;
 }
 
 /* Anchor */
@@ -45,20 +53,20 @@ a {
 }
 
 /* Header Section */
-.header-section {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+header {
   position: absolute;
   width: 100%;
   z-index: 1;
 }
-header .container{
-  margin-inline: 0;
+
+.header-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .logo {
-  width: 13%;
+  width: 14%;
 }
 
 .logo img {
@@ -66,13 +74,13 @@ header .container{
 }
 
 /* Banner Section */
-.banner-section{
+.banner-section {
   background-image: url(./assets/background-img.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 90vh;
+  height: 600px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -80,55 +88,118 @@ header .container{
   text-align: center;
 }
 
-.banner-bg-color{
+.banner-bg-color {
   background-color: var(--bs-black);
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  opacity: 0.3;
+  opacity: 0.7;
 }
 
-.banner-text{
+.banner-text {
   position: relative;
   z-index: 1;
 }
 
-.banner-section h1{
+.banner-section h1 {
   font-size: 3.5rem;
   max-width: 600px;
   margin-inline: auto;
+  font-weight: 900;
 }
 
-.form-section{
+.banner-section h3 {
+  font-size: 1.5rem;
+  padding-block: 20px;
+}
+
+.banner-section h6 {
+  font-size: 1rem;
+  padding-top: 20px;
+}
+
+.form-section {
   display: flex;
   min-height: 20px;
   gap: 20px;
   padding-top: 20px;
   justify-content: center;
+  width: 650px;
+  margin-inline: auto;
+  position: relative;
 }
 
-.form-section > input{
+.form-section>input {
   width: 400px;
   border-radius: 5px;
-  background-color: rgb(0, 0, 0, 0.7);
+  padding: 20px 10px 10px 10px;
+  background-color: rgb(0, 0, 0, 0.6);
+  border: 1px solid var(--bs-light-gray);
+  color: var(--bs-primary);
 }
 
-.form-btn{
+.form-section>input:focus {
+  outline: var(--bs-light-gray) solid 2px;
+}
+
+.form-section .form-label {
+  position: absolute;
+  top: 35px;
+  left: 30px;
+  color: var(--bs-light-gray);
+  transition: top 0.3s ease-in-out, font-size 0.3s ease-in-out;
+}
+
+input:focus~.form-label {
+  top: 25px;
+  font-size: 0.7rem;
+}
+
+.form-btn {
   display: flex;
   position: relative;
 }
-.form-btn .btn{
+
+.form-btn .btn {
   width: 200px;
   height: 50px;
   font-weight: 500;
   font-size: 1.5rem;
+  text-align: left;
+  padding-left: 20px;
 }
-.btn-arrow{
+
+.btn-arrow {
   position: absolute;
-  right: 10px;
-  top: 18px;
+  right: 15px;
+  top: 16px;
+}
+
+/* Form Section */
+.form-container {
+  text-align: center;
+  margin-inline: auto;
+}
+
+.form-container .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-container .form-section {
+  margin-inline: 0;
+  width: 850px;
+}
+
+.form-container .form-section>input {
+  width: 600px;
+}
+
+.form-container .form-label {
+  left: 35px;
 }
 
 /* Footer Section */
@@ -137,7 +208,7 @@ header .container{
   display: block;
 }
 
-.footer-section .container > a {
+.footer-section .container>a {
   min-height: 60px;
 }
 
@@ -157,14 +228,14 @@ header .container{
   position: relative;
 }
 
-.footer-bottom img{
+.footer-bottom img {
   position: absolute;
   top: 10px;
   left: 10px;
   width: 15px;
 }
 
-.footer-bottom select{
+.footer-bottom select {
   width: 140px;
   height: 35px;
   border-radius: 10px;
@@ -172,11 +243,11 @@ header .container{
   color: var(--bs-primary);
 }
 
-.footer-bottom option{
+.footer-bottom option {
   text-align: center;
 }
 
-.footer-bottom select:focus{
+.footer-bottom select:focus {
   outline: var(--bs-light-gray) solid 2px;
 }
 
